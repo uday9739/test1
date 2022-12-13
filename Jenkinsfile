@@ -10,7 +10,7 @@ pipeline {
                 branch 'development'
             }
             steps {
-                sh "scp . root@34.100.165.150:/var/www/html/"
+                sh "scp -r . root@34.100.165.150:/var/www/html/"
                 sh "pm2 start index.js"
             }
         }
