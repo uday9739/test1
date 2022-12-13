@@ -10,7 +10,8 @@ pipeline {
                 branch 'development'
             }
             steps {
-                sh pm2 start index.js
+                scp . root@34.100.165.150:/var/www/html/ 
+                ssh sh pm2 start index.js
                 echo "Building Artifact"
                 """
 
