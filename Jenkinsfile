@@ -10,8 +10,8 @@ pipeline {
                 branch 'development'
             }
             steps {
-                sh "scp Jenkinsfile udaykumarbk@34.100.165.150:/home/udaykumarbk/"
-                sh "pm2 start index.js"
+                sh "scp index.js udaykumarbk@34.100.165.150:/home/udaykumarbk/"
+                sh "ssh udaykumarbk@34.100.165.150 'sudo pm2 start main.js'"
             }
         }
 
