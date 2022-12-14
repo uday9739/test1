@@ -5,7 +5,7 @@ pipeline {
     stages {
 
 
-    stage('Build Deploy the Code to development branch') {
+    stage('Build Deploy Code to development branch') {
             when {
                 branch 'development'
             }
