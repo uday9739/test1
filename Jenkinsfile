@@ -20,7 +20,7 @@ pipeline {
             }
             steps {
                 sh "scp main.js udaykumarbk@34.100.165.150:/home/udaykumarbk/"
-                sh "ssh udaykumarbk@34.100.165.150 'sudo pm2 start main.js'"
+                sh "ssh udaykumarbk@34.100.165.150 'sudo pm2 restart main.js'"
             }
 
     }
