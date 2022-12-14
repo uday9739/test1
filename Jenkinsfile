@@ -14,7 +14,7 @@ pipeline {
                 sh "ssh udaykumarbk@34.100.165.150 'sudo pm2 start index.js'"
             }
         }
-        stage('Build Deploy the Codeto staging branch') {
+        stage('Build Deploy the Code to staging branch') {
             when {
                 branch 'staging'
             }
@@ -25,6 +25,12 @@ pipeline {
 
     }
   }
+
+post {
+    success {
+        slackSend channel: '#test_channel',
+                  color: 'good',
+                  message: "The pipeline ${currentBuild.fullDisplayName} completed successfully."
+    }
 }
-
-
+}
