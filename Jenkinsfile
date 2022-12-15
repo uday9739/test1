@@ -35,7 +35,7 @@ post {
     failure {
         slackSend channel: '#test_channel',
                   color: 'danger',
-                  message: "The pipeline ${currentBuild.fullDisplayName} is failed."
+                  message: "The pipeline ${currentBuild.fullDisplayName} is got failed."
     }
 
 }
